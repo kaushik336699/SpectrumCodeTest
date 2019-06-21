@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">codetest</string>
+    <string name="action_settings">New User</string>
+    <string name="string_username">Enter User Name</string>
+    <string name="string_password">Enter Password</string>
+</resources>
