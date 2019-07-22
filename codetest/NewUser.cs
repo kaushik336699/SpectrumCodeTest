@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,8 +67,33 @@ namespace codetest
                 Toast.MakeText(this, "Password must contain atleast one Albhabet and one Numberic Digit!", ToastLength.Short).Show();
                 return false;
             }
-
+            else if(isRepeatExists(_password.Text.ToCharArray()))
+            {
+                Toast.MakeText(this, "Password contains repeated sequence of charecters!", ToastLength.Short).Show();
+                return false;
+            }
             return true;
+        }
+
+        private bool isRepeatExists(char[] str)
+        {
+            HashSet<char> h = new HashSet<char>();
+  
+            for (int i = 0; i <= str.Length - 1; i++)
+            {
+                char c = str[i];
+ 
+                if (h.Contains(c))
+                {
+                    return true;
+                }
+                else  
+                {
+                    h.Add(c);
+                }
+            }
+
+            return false;
         }
     }
 }
